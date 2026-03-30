@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Story | Digital Poise Agency</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#F8F8F8] text-[#0B0B0B] font-['Lato'] selection:bg-[#C8A96A] selection:text-white">
+
+    <div id="loader"><img src="logo.png" alt="Loading..."></div>
+
+    <nav class="fixed w-full z-50 bg-[#F8F8F8]/90 backdrop-blur-md border-b border-gray-100">
+        <div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" class="nav-logo" alt="Logo">
+                <h1 class="font-['Montserrat'] text-lg tracking-[0.4em] font-extrabold uppercase">Digital Poise</h1>
+            </a>
+            <div class="hidden md:flex space-x-10 text-[11px] uppercase tracking-[0.2em] text-gray-500">
+                <a href="about.html" class="text-[#0B0B0B] font-bold border-b border-[#C8A96A] pb-1">Story</a>
+                <a href="services.html" class="hover:text-[#C8A96A] transition-colors">Packages</a>
+                <a href="portfolio.html" class="hover:text-[#C8A96A] transition-colors">Work</a>
+                <a href="contact.html" class="hover:text-[#C8A96A] transition-colors">Book Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-48 pb-20 px-8 bg-white text-center">
+        <div class="max-w-7xl mx-auto fade-up">
+            <p class="text-[#C8A96A] font-['Montserrat'] tracking-[0.4em] uppercase text-[10px] mb-4 font-bold">The Intent Behind the Agency</p>
+            <h1 class="font-['Montserrat'] text-5xl md:text-7xl font-bold uppercase mb-8 italic">The Story</h1>
+            <p class="max-w-2xl mx-auto text-gray-400 font-light text-[11px] uppercase tracking-[0.3em] leading-loose">
+                Luxury isn’t just an aesthetic. <br> It’s the precision of your digital footprint.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-32 px-8 max-w-7xl mx-auto overflow-hidden">
+        <div class="grid md:grid-cols-2 gap-24 items-center">
+            
+            <div class="relative group fade-up">
+                <div id="image-box" class="aspect-[4/5] overflow-hidden bg-white border border-gray-100 shadow-2xl relative flex items-center justify-center">
+                    <img 
+                        src="ceo.jpg" 
+                        alt="Shylet - Founder of Digital Poise" 
+                        class="w-full h-full object-cover img-reveal grayscale group-hover:grayscale-0 transition-all duration-[1.5s] transform group-hover:scale-105"
+                        onerror="this.style.display='none'; document.getElementById('image-box').innerHTML='<div class=\'text-center p-8\'><p class=\'text-[9px] uppercase tracking-[0.5em] text-[#C8A96A] font-bold\'>Portrait Pending</p><p class=\'text-[8px] text-gray-300 mt-2 uppercase\'>Check file name: ceo.jpg</p></div>';"
+                    >
+                </div>
+                <div class="absolute -bottom-8 -right-8 w-40 h-40 border-b-2 border-r-2 border-[#C8A96A] -z-10 opacity-30 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-1000"></div>
+            </div>
+
+            <div class="space-y-12 fade-up" style="animation-delay: 0.4s;">
+                <div class="space-y-4">
+                    <h3 class="font-['Montserrat'] text-[10px] tracking-[0.6em] uppercase text-[#C8A96A] font-bold">The Visionary</h3>
+                    <h2 class="font-['Montserrat'] text-4xl md:text-6xl font-bold uppercase italic leading-tight tracking-tighter">Shylet.</h2>
+                    <div class="w-16 h-[1px] bg-[#C8A96A]"></div>
+                </div>
+                
+                <div class="space-y-6 text-gray-500 text-lg leading-relaxed font-light">
+                    <p>
+                        With a relentless focus on <span class="text-black font-medium italic">Strategic Architecture</span>, Shylet founded Digital Poise to solve a singular problem: high-tier brands being lost in a world of digital noise.
+                    </p>
+                    <p class="text-sm uppercase tracking-widest text-gray-400 leading-loose">
+                        She believes that presence without strategy is wasted potential. Every project we undertake is built on the philosophy that attention is the modern currency—and authority is how you create legacy.
+                    </p>
+                </div>
+
+                <div class="pt-6">
+                    <a href="contact.html" class="inline-flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.4em] border-b border-black pb-2 hover:text-[#C8A96A] hover:border-[#C8A96A] transition-all group/link">
+                        Private Consultation 
+                        <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/link:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-40 bg-[#0B0B0B] text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.02] flex items-center justify-center pointer-events-none">
+            <h2 class="text-[30vw] font-bold uppercase tracking-tighter select-none">STORY</h2>
+        </div>
+        <div class="max-w-4xl mx-auto px-8 text-center relative z-10 space-y-12">
+            <h2 class="font-['Montserrat'] text-2xl md:text-4xl font-bold uppercase italic tracking-widest leading-snug">
+                "We don't just post. <br> We position."
+            </h2>
+            <p class="text-gray-400 text-sm uppercase tracking-[0.3em] font-light leading-loose max-w-xl mx-auto">
+                Digital Poise was built for the visionaries, the founders, and the brands who demand a presence that matches their ambition.
+            </p>
+        </div>
+    </section>
+
+    <footer class="py-16 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center">
+                <img src="logo.png" class="w-6 h-6 mr-4 grayscale opacity-40" alt="Footer Logo">
+                <p class="font-['Montserrat'] text-[9px] tracking-[0.4em] uppercase text-gray-400">© 2026 DIGITAL POISE AGENCY.</p>
+            </div>
+            <div class="flex gap-10 text-gray-400">
+                <a href="#" class="hover:text-[#C8A96A] transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                <a href="#" class="hover:text-[#C8A96A] transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                <a href="mailto:hello@digitalpoise.co.za" class="hover:text-[#C8A96A] transition-colors"><i data-lucide="mail" class="w-4 h-4"></i></a>
+            </div>
+            <p class="font-['Montserrat'] text-[8px] tracking-[0.3em] uppercase text-gray-300 italic">Built by GASA TECH</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener("load", () => {
+            document.querySelector("#loader").classList.add("loader-hidden");
+        });
+        lucide.createIcons();
+    </script>
+</body>
+</html>

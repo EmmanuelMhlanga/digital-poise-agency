@@ -1,0 +1,178 @@
+/* --- 1. CORE DEFAULTS & TYPOGRAPHY --- */
+html {
+    scroll-behavior: smooth;
+    background-color: #F8F8F8;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    background-color: #F8F8F8;
+    color: #0B0B0B;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+/* --- 2. LOADING SCREEN (SPLASH) --- */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), visibility 1s;
+}
+
+#loader img {
+    width: 60px;
+    height: auto;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.2; transform: scale(0.95); filter: grayscale(100%); }
+    50% { opacity: 1; transform: scale(1); filter: grayscale(0%); }
+    100% { opacity: 0.2; transform: scale(0.95); filter: grayscale(100%); }
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* --- 3. NAVIGATION & LUXURY STATES --- */
+nav {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-logo {
+    width: 24px; 
+    height: 24px;
+    object-fit: contain;
+    margin-right: 12px;
+}
+
+/* Elite Underline Effect */
+nav a {
+    position: relative;
+    padding-bottom: 2px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #C8A96A;
+    transition: width 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* --- 4. PORTFOLIO & IMAGE REVEALS --- */
+.img-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.img-reveal {
+    filter: grayscale(100%);
+    transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.group:hover .img-reveal {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Background Watermark Text (The "POISE" effect) */
+.bg-watermark {
+    font-size: 25vw;
+    line-height: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(200, 169, 106, 0.1);
+    user-select: none;
+    pointer-events: none;
+}
+
+/* --- 5. PREMIUM SCROLLBAR --- */
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F8F8F8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0B0B0B;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #C8A96A;
+}
+
+/* --- 6. ANIMATIONS --- */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUpReveal 1.4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@keyframes fadeUpReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Utility for staggered delays */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+/* --- 7. BUTTONS & INPUTS --- */
+button, .btn {
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #C8A96A !important;
+    padding-left: 10px;
+}
+
+input, textarea, select {
+    transition: all 0.4s ease;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .bg-watermark {
+        font-size: 40vw;
+    }
+    section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
