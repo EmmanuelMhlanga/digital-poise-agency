@@ -17,7 +17,7 @@
     <nav class="fixed w-full z-50 bg-[#F8F8F8]/90 backdrop-blur-md border-b border-gray-100">
         <div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
             <a href="index.html" class="flex items-center">
-                <img src="logo.png" class="nav-logo" alt="Logo">
+                <img src="logo.png" class="nav-logo" alt="Logo" style="width: 24px; height: 24px; margin-right: 12px;">
                 <h1 class="font-['Montserrat'] text-lg tracking-[0.4em] font-extrabold uppercase">Digital Poise</h1>
             </a>
             <div class="hidden md:flex space-x-10 text-[11px] uppercase tracking-[0.2em] text-gray-500">
@@ -51,11 +51,18 @@
                     </p>
                 </div>
 
-                <div class="space-y-4">
+                <div class="space-y-6">
                     <h2 class="font-['Montserrat'] text-[10px] tracking-[0.5em] uppercase text-[#C8A96A] font-bold">Direct Channels</h2>
-                    <div class="space-y-2">
-                        <a href="mailto:hello@digitalpoise.co.za" class="block text-xl font-['Montserrat'] hover:text-[#C8A96A] transition-colors lowercase">hello@digitalpoise.co.za</a>
-                        <a href="#" class="block text-xl font-['Montserrat'] hover:text-[#C8A96A] transition-colors">LinkedIn</a>
+                    <div class="space-y-4">
+                        <a href="mailto:hello@digitalpoise.co.za" class="flex items-center gap-4 text-xl font-['Montserrat'] hover:text-[#C8A96A] transition-colors lowercase">
+                            <i data-lucide="mail" class="w-5 h-5 text-gray-400"></i> hello@digitalpoise.co.za
+                        </a>
+                        <a href="#" class="flex items-center gap-4 text-xl font-['Montserrat'] hover:text-[#C8A96A] transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5 text-gray-400"></i> LinkedIn
+                        </a>
+                        <a href="#" class="flex items-center gap-4 text-xl font-['Montserrat'] hover:text-[#C8A96A] transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5 text-gray-400"></i> Instagram
+                        </a>
                     </div>
                 </div>
 
@@ -68,11 +75,11 @@
             </div>
 
             <div class="bg-white p-12 border border-gray-100 shadow-sm">
-                <form action="#" class="space-y-8">
+                <form action="thank-you.html" class="space-y-8">
                     <div class="grid md:grid-cols-2 gap-8">
                         <div class="space-y-2">
                             <label class="text-[9px] uppercase tracking-[0.3em] text-gray-400 font-bold">Full Name</label>
-                            <input type="text" placeholder="John Doe" class="w-full border-b border-gray-200 py-3 text-sm focus:border-[#C8A96A] outline-none transition-all bg-transparent">
+                            <input type="text" required placeholder="John Doe" class="w-full border-b border-gray-200 py-3 text-sm focus:border-[#C8A96A] outline-none transition-all bg-transparent">
                         </div>
                         <div class="space-y-2">
                             <label class="text-[9px] uppercase tracking-[0.3em] text-gray-400 font-bold">Company Name</label>
@@ -82,12 +89,12 @@
 
                     <div class="space-y-2">
                         <label class="text-[9px] uppercase tracking-[0.3em] text-gray-400 font-bold">Business Email</label>
-                        <input type="email" placeholder="ceo@company.com" class="w-full border-b border-gray-200 py-3 text-sm focus:border-[#C8A96A] outline-none transition-all bg-transparent">
+                        <input type="email" required placeholder="ceo@company.com" class="w-full border-b border-gray-200 py-3 text-sm focus:border-[#C8A96A] outline-none transition-all bg-transparent">
                     </div>
 
                     <div class="space-y-2">
                         <label class="text-[9px] uppercase tracking-[0.3em] text-gray-400 font-bold">Desired Tier</label>
-                        <select class="w-full border-b border-gray-200 py-3 text-sm focus:border-[#C8A96A] outline-none transition-all bg-transparent text-gray-500">
+                        <select required class="w-full border-b border-gray-200 py-3 text-sm focus:border-[#C8A96A] outline-none transition-all bg-transparent text-gray-500">
                             <option value="">Select a Strategy Tier</option>
                             <option value="clarity">Strategic Clarity (Foundation)</option>
                             <option value="momentum">Strategic Momentum (Growth)</option>
@@ -97,7 +104,7 @@
 
                     <div class="space-y-2">
                         <label class="text-[9px] uppercase tracking-[0.3em] text-gray-400 font-bold">Project Vision</label>
-                        <textarea rows="4" placeholder="Briefly describe your goals..." class="w-full border border-gray-100 p-4 text-sm focus:border-[#C8A96A] outline-none transition-all bg-[#FBFBFB]"></textarea>
+                        <textarea rows="4" required placeholder="Briefly describe your goals..." class="w-full border border-gray-100 p-4 text-sm focus:border-[#C8A96A] outline-none transition-all bg-[#FBFBFB]"></textarea>
                     </div>
 
                     <button type="submit" class="w-full bg-[#0B0B0B] text-white py-5 text-[10px] font-bold uppercase tracking-[0.4em] hover:bg-[#C8A96A] transition-all">
@@ -126,7 +133,11 @@
 
     <script>
         window.addEventListener("load", () => {
-            document.querySelector("#loader").classList.add("loader-hidden");
+            const loader = document.querySelector("#loader");
+            if (loader) {
+                loader.classList.add("loader-hidden");
+                setTimeout(() => { loader.style.display = "none"; }, 600);
+            }
         });
         lucide.createIcons();
     </script>
