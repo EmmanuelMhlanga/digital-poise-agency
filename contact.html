@@ -9,10 +9,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ensures the loader fades out correctly */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: white;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.6s ease;
+        }
+        .loader-hidden { opacity: 0; pointer-events: none; }
+    </style>
 </head>
 <body class="bg-[#F8F8F8] text-[#0B0B0B] font-['Lato'] selection:bg-[#C8A96A] selection:text-white">
 
-    <div id="loader"><img src="logo.png" alt="Loading..."></div>
+    <div id="loader"><img src="logo.png" alt="Loading..." class="w-16 h-16 animate-pulse"></div>
 
     <nav class="fixed w-full z-50 bg-[#F8F8F8]/90 backdrop-blur-md border-b border-gray-100">
         <div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
